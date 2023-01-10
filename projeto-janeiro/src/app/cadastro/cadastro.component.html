@@ -1,1 +1,57 @@
 <p>cadastro works!</p>
+
+<app-home></app-home>
+
+<h3>USERS</h3>
+
+<form>
+  <ul>
+    <li *ngFor="let user of users"> Nome: {{ user.id }} - {{ user.first_name }}</li>
+  </ul>
+  <div>
+    <label for="name">
+      Name
+    </label>
+    <input id="first_name" type="text" formControlName="first_name">
+  </div>
+  <button class="button" type="submit">Cadastrar</button>
+</form>
+
+
+
+
+<!-- <div class="cadastro">
+  <div class="container">
+    <div class="text">
+      <b>Identifique-se</b>
+      <br />
+      para criar sua conta
+    </div>
+    <div class="description">
+      Informe seus dados para criar sua conta
+    </div>
+    <form formControl>
+      <input name="first_name" type="text" maxlength="150" placeholder="Primeiro nome" required=""/>
+      <input name="last_name" type="text" maxlength="150" placeholder=" Ultimo nome" required=""/>
+      <input type="text" name="birthdate"  data-mask="00/00/0000" placeholder="Data de Nascimento" required="" id="id_birthdate" autocomplete="off" maxlength="10">
+      <select name="city" placeholder="None" required id="id_city" required="">
+        <option value="" selected>Qual sua cidade?</option>
+        <option value="2">Açailândia</option>
+      </select>
+      <select name="gender" id="id_gender" required="">
+        <option value="" selected>Selecione um gênero</option>
+        <option value="masculine">Masculino</option>
+        <option value="feminine">Feminino</option>
+      </select>
+      <input type="text" name="whatsapp" data-mask="(00)0 0000-0000" placeholder="Digite seu Whatsapp" required="" id="whatsapp">
+      <input type="text" name="email" placeholder="Digite seu e-mail" required="" id="email">
+      <input name="password" type="password" placeholder="Digite sua senha" required=""/>
+      <input name="password" type="password" placeholder="Repita sua senha" required="" id="password"/>
+      <button type="submit" class="btn btn-primary">Cadastrar</button>
+        Ja possui conta?
+        <a class="account" href="login"><b>Clique aqui!</b></a>
+    </form>
+    <button type="submit">Cadastrar</button>
+  </div>
+</div>
+ -->

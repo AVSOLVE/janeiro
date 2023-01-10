@@ -1,0 +1,37 @@
+
+<h3 class="p-3 text-center">Angular - Display a list of items with ngFor</h3>
+<div class="container">
+  <div>
+    <div>
+      <div>id: </div>
+      <input [(ngModel)]="user.id" />
+      <div>Name: </div>
+      <input [(ngModel)]="user.name" />
+      <div>userName: </div>
+      <input [(ngModel)]="user.username" />
+      <div>eMail: </div>
+      <input [(ngModel)]="user.email" />
+    </div>
+    <div>
+      <button (click)="addUser()">Add</button>
+    </div>
+  </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,60 +1,27 @@
 <p>login works!</p>
 
 
-<form>
-  <div class="mb-3">
-    <label for="inputEmail" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="inputPassword" class="form-label">Password</label>
-    <input type="password" class="form-control" id="inputPassword">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Entrar</button>
-</form>
 
 <div class="login">
   <div class="container">
     <div class="text">
-      
-    </div>
-  </div>
-</div>
-
-
-<div class="login">
-  <div class="container">
-
-    <div class="text">
-      <b>Faça seu login</b> <br />
+      <b>Faça seu login</b>
+      <br />
       ou crie sua conta
     </div>
     <div class="description">
       Fique por dentro de todas as novidades das obras.
     </div>
-    <form method="POST">
-      <input
-        name="email"
-        type="text"
-        placeholder="Digite seu e-mail"
-      />
-      <input
-        name="password"
-        type="password"
-        placeholder="Digite sua senha"
-      />
-      <a class="password" href="/esqueci-a-senha/">
+    <form>
+      <input name="email" type="text" placeholder="Digite seu e-mail" />
+      <input name="password" type="password" placeholder="Digite sua senha" />
+      <a class="password" href="recuperar-senha">
         Esqueceu sua senha? <b>Clique aqui!</b>
       </a>
-      <button type="submit" class="button">Entrar</button>
-      <a class="account" href="/cadastro/">
-        Ainda não é possui conta? <b>Crie agora!</b>
-      </a>
+      <br>
+      <button type="submit" class="btn btn-primary">Entrar</button>
+        Ainda não é possui conta?
+        <a class="account" href="cadastro"><b>Crie agora!</b></a>
     </form>
   </div>
 </div>

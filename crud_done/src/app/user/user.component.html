@@ -1,0 +1,44 @@
+<h3 class="p-3 text-center">Angular - Display a list of items with ngFor</h3>
+<div class="container text-md-center">
+  <div>
+    <div>
+      <div>Name:</div>
+      <input [(ngModel)]="usuario.name" />
+      <div>UserName:</div>
+      <input [(ngModel)]="usuario.username" />
+      <div>eMail:</div>
+      <input [(ngModel)]="usuario.email" />
+      <div>Enter iD to delete:</div>
+      <select name="delId" id="delId" [(ngModel)]="deleteId">
+        <option value="">Escolha uma opt</option>
+        <option *ngFor="let user of usuarios" [value]="user.id">
+          {{ user.id }}
+        </option>
+      </select>
+    </div>
+    <div>
+      <button (click)="setData()">Add</button>
+      <button (click)="deleteData()">Del</button>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+
+<h2>List of Users</h2>
+<table class="table table-striped table-bordered">
+  <thead>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>USERNAME</th>
+    <th>EMAIL</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usuarios">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>
